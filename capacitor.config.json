@@ -1,0 +1,9 @@
+{
+  "appId": "com.fountain.stream",
+  "appName": "Fountain Stream",
+  "webDir": "out",
+  "android": {
+    "allowMixedContent": true,
+    "webContentsDebuggingEnabled": false
+  }
+}

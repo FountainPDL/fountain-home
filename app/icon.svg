@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="grad1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#5B21B6" />
+      <stop offset="50%" stop-color="#8A2BE2" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="58" fill="#1a1a1a" />
+  <!-- Fountain droplet + ripples -->
+  <g transform="translate(30,10)">
+    <!-- Ripples -->
+    <ellipse cx="30" cy="80" rx="23" ry="4" fill="url(#grad1)" opacity="0.15" />
+    <ellipse cx="30" cy="85" rx="15" ry="3" fill="url(#grad1)" opacity="0.08" />
+    <!-- Fountain arcs -->
+    <path
+      d="M30 70 C 10 50, 10 30, 30 15"
+      fill="none"
+      stroke="url(#grad1)"
+      stroke-width="3"
+      stroke-linecap="round"
+      filter="url(#glow)"
+      opacity="0.95"
+    />
+    <path
+      d="M30 70 C 50 50, 50 30, 30 15"
+      fill="none"
+      stroke="url(#grad1)"
+      stroke-width="3"
+      stroke-linecap="round"
+      opacity="0.95"
+    />
+    <!-- Droplet -->
+    <path d="M30 15 C26 23,25 30,30 38 C35 30,34 23,30 15 Z" fill="url(#grad1)" filter="url(#glow)" />
+    <!-- Inner highlight -->
+    <path d="M30 17 C28 23,28 28,30 35 C32 28,32 23,30 17 Z" fill="#FFFFFF" opacity="0.15" />
+  </g>
+</svg>
