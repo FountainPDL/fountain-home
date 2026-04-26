@@ -1,4 +1,3 @@
-// Server component - handles static export requirement
 export function generateStaticParams() {
   return []
 }
