@@ -205,7 +205,3 @@ export default function WatchPage({
   )
 }
 
-// Required for static export - generates empty shell; client JS handles the actual routing
-export function generateStaticParams() {
-  return []
-}
